@@ -24,7 +24,7 @@
 </div>
 
 
-<script src="http://cdn.livefyre.com/libs/sidenotes/v0.1.0-beta/sidenotes.min.js"></script>
+<script src="http://cdn.livefyre.com/libs/sidenotes/v1/sidenotes.min.js"></script>
 <script type="text/javascript">
 
 	var lfepAuthDelegate = new fyre.conv.SPAuthDelegate({engage: {app: "client-solutions.auth.fyre.co"}});
