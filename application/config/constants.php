@@ -70,6 +70,7 @@ define('TYPE_LIVEBLOG',					'liveblog');
 define('TYPE_LIVECHAT',					'livechat');
 define('TYPE_LIVEREVIEWS',				'reviews');
 define('TYPE_SIDENOTES',				'sidenotes');
+define('TYPE_RATINGS',					'ratings');
 
 // Array Keys
 define('ARTICLE_ID',					'articleid');

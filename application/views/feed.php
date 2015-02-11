@@ -1,7 +1,9 @@
 <h1><?=${DATA_BODY}[ARTICLE_TITLE]?></h1>
-<p>This page provides an example of the <a href="http://answers.livefyre.com/developers/app-integrations/gallery/" target="_blank">Gallery</a> app.</p>
+<p>This page provides an example of the <a href="http://answers.livefyre.com/developers/app-integrations/feed/" target="_blank">Feed</a> app.</p>
 
-<div id="livefyre"></div>
+<div style="width:60%; margin:auto;">
+	<div id="livefyre"></div>
+</div>
 
 <script type="text/javascript">
 
@@ -11,16 +13,16 @@
 	    articleId: '<?=${DATA_BODY}[ARTICLE_ID]?>'
 	};
 
-	var galleryConfig = {
+	var feedConfig = {
 		el: document.getElementById('livefyre')
 	};
 
 	Livefyre.require(
-		['streamhub-gallery#0', 'streamhub-sdk#3'],
-		function(Gallery, SDK){
+		['streamhub-feed#3', 'streamhub-sdk#3'],
+		function(Feed, SDK){
 			var collection = new SDK.Collection(collectionConfig);
-			var gallery = new Gallery(galleryConfig);
-			collection.pipe(gallery);
+			var feed = new Feed(feedConfig);
+			collection.pipe(feed);
 		}
 	);
 
