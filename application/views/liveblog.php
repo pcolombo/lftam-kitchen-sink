@@ -6,12 +6,9 @@
 </div>
 
 <script type="text/javascript">
-
-	var theAuthDelegate = new fyre.conv.SPAuthDelegate({engage: {app: "client-solutions.auth.fyre.co"}});
 	
 	var networkConfig = {
-		network: '<?=LIVEFYRE_NETWORK?>',
-		authDelegate: theAuthDelegate
+		network: '<?=LIVEFYRE_NETWORK?>'
 	}
 
 	var convConfig = {
@@ -21,6 +18,18 @@
 		collectionMeta: '<?=${DATA_BODY}[COLLECTION_META]?>'
 	}
 
-	fyre.conv.load( networkConfig, [convConfig] );
+	var lfepConfig = {
+		engageOpts: {app: '<?=LFEP_APP?>'}
+	}
+
+	Livefyre.require(
+		['fyre.conv#3','auth','lfep-auth-delegate#0'],
+		function(Conv, Auth, LFEPDelegate){
+			var lfepAuthDelegate = new LFEPDelegate(lfepConfig);
+			Auth.delegate(lfepAuthDelegate);
+			new Conv(networkConfig,[convConfig],function(widget){});
+		}
+	);
+	
 
 </script>

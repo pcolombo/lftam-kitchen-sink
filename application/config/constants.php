@@ -48,18 +48,16 @@ define('FOPEN_READ_WRITE_CREATE_STRICT',		'x+b');
 /* Production Network */
 define('LIVEFYRE_NETWORK',				'client-solutions.fyre.co');
 define('LIVEFYRE_NETWORK_SECRET', 		'-get this from powertools-');
-define('LIVEFYRE_JS_SOURCE_DOMAIN', 	'zor.livefyre.com');
-define('LIVEFYRE_JS_SOURCE_URL',		'http://zor.livefyre.com/wjs/v3.0/javascripts/livefyre.js');
 define('LIVEFYRE_SITE_ID', 				'YOUR SITE ID');
 define('LIVEFYRE_SITE_KEY',				'YOUR SITE KEY');
 define('LIVEFYRE_SITE_URL', 			'YOUR SITE URL');
+define('LFEP_URL',						'http://client-solutions.ep.livefyre.com/media/Y2xpZW50LXNvbHV0aW9ucy5lcC5saXZlZnlyZS5jb20=/javascripts/customprofiles.js');
+define('LFEP_APP',						'client-solutions.auth.fyre.co');
 
 
 /* UAT Network 
 define('LIVEFYRE_NETWORK',				'client-solutions-uat.fyre.co');
 define('LIVEFYRE_NETWORK_SECRET', 		'--get this from powertools--');
-define('LIVEFYRE_JS_SOURCE_DOMAIN', 	'zor.t402.livefyre.com');
-define('LIVEFYRE_JS_SOURCE_URL',		'http://zor.t402.livefyre.com/wjs/v3.0/javascripts/livefyre.js');
 define('LIVEFYRE_SITE_ID', 				'YOUR UAT SITE ID');
 define('LIVEFYRE_SITE_KEY',				'YOUR UAT SITE KEY');
 define('LIVEFYRE_SITE_URL', 			'YOUR UAT SITE URL');
