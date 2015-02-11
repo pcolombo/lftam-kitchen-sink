@@ -22,7 +22,7 @@
 	};
 
 	Livefyre.require(
-		['streamhub-map#1', 'streamhub-sdk#3'],
+		['streamhub-map#1', 'streamhub-sdk#2'],
 		function(Map, SDK){
 			var collection = new SDK.Collection(collectionConfig);
 			var map = new Map(mapConfig);

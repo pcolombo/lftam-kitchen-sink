@@ -18,7 +18,7 @@
 	};
 
 	Livefyre.require(
-		['streamhub-feed#3', 'streamhub-sdk#3'],
+		['streamhub-feed#3', 'streamhub-sdk#2'],
 		function(Feed, SDK){
 			var collection = new SDK.Collection(collectionConfig);
 			var feed = new Feed(feedConfig);

@@ -16,7 +16,7 @@
 	};
 
 	Livefyre.require(
-		['streamhub-gallery#0', 'streamhub-sdk#3'],
+		['streamhub-gallery#0', 'streamhub-sdk#2'],
 		function(Gallery, SDK){
 			var collection = new SDK.Collection(collectionConfig);
 			var gallery = new Gallery(galleryConfig);

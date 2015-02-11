@@ -1,4 +1,4 @@
-<h1><?=${DATA_BODY}[ARTICLE_TITLE]?></h1>
+	<h1><?=${DATA_BODY}[ARTICLE_TITLE]?></h1>
 <p>This page provides an example of <a href="http://answers.livefyre.com/developers/app-integrations/media-wall/" target="_blank">Media Wall</a> app, with Auth and user uploads enabled.</p>
 
 <div id="livefyre"></div>
