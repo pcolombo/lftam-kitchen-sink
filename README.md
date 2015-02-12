@@ -14,7 +14,7 @@ Kitchen Sink uses the client-solutions LFEP network for login. Make sure you are
 
 ### 1. Get Livefyre Credentials
 
-1. Clone this project into your server root. (You should see the files/folders listed above in your local server's root folder.) You can find this in your MAMP settings, or change your MAMP settings to point to where you cloned this project. Make sure you start MAMP.
+1. Clone this project into your server root. Contact Paul / DE if you need help setting up a local web server using MAMP.
 
 2. Log into powertools and get the Network Key for client-solutions.
 

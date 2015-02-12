@@ -23,24 +23,27 @@
 	</div>
 </div>
 
-
-<script src="http://cdn.livefyre.com/libs/sidenotes/v1/sidenotes.min.js"></script>
 <script type="text/javascript">
-
-	var lfepAuthDelegate = new fyre.conv.SPAuthDelegate({engage: {app: "client-solutions.auth.fyre.co"}});
+	
+	var lfepConfig = {
+		engageOpts: {app: '<?=LFEP_APP?>'}
+	}
 	
 	var convConfig = {
 		network: '<?=LIVEFYRE_NETWORK?>',
-		authDelegate: lfepAuthDelegate,
 		selectors: '.lf-sidenotes',
 		siteId: '<?=LIVEFYRE_SITE_ID?>',
 		articleId: '<?=${DATA_BODY}[ARTICLE_ID]?>',
-		el: 'livefyre',
-		collectionMeta: '<?=${DATA_BODY}[COLLECTION_META]?>', 
-		position: 'bottom',
-		commenting_enabled: false
+		collectionMeta: '<?=${DATA_BODY}[COLLECTION_META]?>'
 	}
 
-	new Livefyre.Sidenotes(convConfig);
+	Livefyre.require(
+		['sidenotes#1','auth','lfep-auth-delegate#0'], 
+		function(Sidenotes, Auth, LFEPDelegate) {
+			var lfepAuthDelegate = new LFEPDelegate(lfepConfig);
+			Auth.delegate(lfepAuthDelegate);
+			new Sidenotes(convConfig);
+		}
+	);
 
 </script>

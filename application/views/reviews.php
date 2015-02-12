@@ -1,21 +1,22 @@
 <h1><?=${DATA_BODY}[ARTICLE_TITLE]?></h1>
 <p>This page provides an example of the <a href="http://docs.livefyre.com/developers/reference/app-types/reviews/" target="_blank">Live Reviews</a> app, which is part of StreamHub Core.</p>
 
-<div id="livefyre">Coming soon!</div>
+<div id="livefyre"></div>
 
 <script type="text/javascript">
 
-	var lfepAuthDelegate = new fyre.conv.SPAuthDelegate({engage: {app: "client-solutions.auth.fyre.co"}});
+	var lfepConfig = {
+		engageOpts: {app: '<?=LFEP_APP?>'}
+	}
 
 	var customStrings = {
-		ratingSubpartPlaceholders: ['This...','That...','The Other...'],
-		ratingSubpartTitles: ['This:','That:','The Other:'],
-		reviewStreamTitle: 'Overall Impressions:'
+		ratingSubpartPlaceholders: ['Pros...','Cons...','Favorite Thing...'],
+		ratingSubpartTitles: ['Pros: ','Cons: ','Favorite Thing: '],
+		reviewStreamTitle: 'Your Review:'
 	};
 
     var networkConfig = {
 		network: '<?=LIVEFYRE_NETWORK?>',
-		authDelegate: lfepAuthDelegate,
 		strings: customStrings
 	}
 
@@ -31,6 +32,13 @@
 		enableHalfRating: true
 	}
 
-	fyre.conv.load(networkConfig, [convConfig]);
+	Livefyre.require(
+		['fyre.conv#3','auth','lfep-auth-delegate#0'],
+		function(Review, Auth, LFEPDelegate){
+			var lfepAuthDelegate = new LFEPDelegate(lfepConfig);
+			Auth.delegate(lfepAuthDelegate);
+			new Review(networkConfig,[convConfig],function(widget){});
+		}
+	);
 
 </script>

@@ -15,23 +15,17 @@ class Data_cache extends CI_Model {
                 ARTICLE_TITLE   => "Comments",
                 ARTICLE_URL     => "comments"
             ),
-            "liveblog" => array(
+            "blog" => array(
                 ARTICLE_ID      => DEMO_ARTICLE_ID_PREFIX."0002",
-                ARTICLE_TITLE   => "Live Blog",
-                ARTICLE_URL     => "liveblog", 
+                ARTICLE_TITLE   => "Blog",
+                ARTICLE_URL     => "blog", 
                 COLLECTION_TYPE => TYPE_LIVEBLOG
             ),
-            "livechat" => array(
+            "chat" => array(
                 ARTICLE_ID      => DEMO_ARTICLE_ID_PREFIX."0003",
-                ARTICLE_TITLE   => "Live Chat",
-                ARTICLE_URL     => "livechat", 
+                ARTICLE_TITLE   => "Chat",
+                ARTICLE_URL     => "chat", 
                 COLLECTION_TYPE => TYPE_LIVECHAT
-            ),
-            "livereviews" => array(
-                ARTICLE_ID      => DEMO_ARTICLE_ID_PREFIX."0004",
-                ARTICLE_TITLE   => "Live Reviews",
-                ARTICLE_URL     => "livereviews", 
-                COLLECTION_TYPE => TYPE_LIVEREVIEWS
             ),
             "sidenotes" => array(
                 ARTICLE_ID      => DEMO_ARTICLE_ID_PREFIX."sn_0001",
@@ -39,15 +33,31 @@ class Data_cache extends CI_Model {
                 ARTICLE_URL     => "sidenotes", 
                 COLLECTION_TYPE => TYPE_SIDENOTES
             ),
+            "reviews" => array(
+                ARTICLE_ID      => DEMO_ARTICLE_ID_PREFIX."0004",
+                ARTICLE_TITLE   => "Reviews",
+                ARTICLE_URL     => "reviews", 
+                COLLECTION_TYPE => TYPE_LIVEREVIEWS
+            ),
             "mediawall" => array(
                 ARTICLE_ID      => "",
-                ARTICLE_TITLE   => "Media Wall",
+                ARTICLE_TITLE   => "Media Wall App",
                 ARTICLE_URL     => "mediawall"
             ),
             "gallery" => array(
                 ARTICLE_ID      => "",
-                ARTICLE_TITLE   => "Streamhub Gallery",
+                ARTICLE_TITLE   => "Gallery App",
                 ARTICLE_URL     => "gallery"
+            ),
+            "feed" => array(
+                ARTICLE_ID      => "",
+                ARTICLE_TITLE   => "Feed App",
+                ARTICLE_URL     => "feed"
+            ),
+            "map" => array(
+                ARTICLE_ID      => "custom-1399906747900",
+                ARTICLE_TITLE   => "Map App",
+                ARTICLE_URL     => "map"
             )
         );
     }
